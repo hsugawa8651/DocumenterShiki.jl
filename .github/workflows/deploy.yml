@@ -66,18 +66,20 @@ jobs:
       # Documenter.jlのインストール
       - name: Install Julia dependencies
         run: |
-          julia --project=docs -e '
+          cd docs
+          julia --project=. -e '
             using Pkg
             Pkg.instantiate()
+            Pkg.status()
           '
-      
+
       # ドキュメントのビルド
       - name: Build documentation
         env:
           CI: true  # prettyurlsを有効にするための環境変数
         run: |
           cd docs
-          julia make_deploy.jl
+          julia --project=. make_deploy.jl
       
       # GitHub Pages用の設定
       - name: Setup Pages
