@@ -30,25 +30,44 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       
+      # Node.jsのセットアップ
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # pnpmのセットアップ
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 9
+
+      # Node.js依存関係のインストール
+      - name: Install Node dependencies
+        run: pnpm install
+
+      # Shikiアセットのビルド
+      - name: Build Shiki assets
+        run: pnpm run build-shiki
+
       # Juliaのセットアップ
       - name: Setup Julia
         uses: julia-actions/setup-julia@v2
         with:
           version: '1.11'  # または '1' で最新安定版
-      
+
       # Juliaパッケージのキャッシュ（Plotsのコンパイル済みファイルも含む）
       - name: Cache Julia packages
         uses: julia-actions/cache@v2
         with:
           cache-name: julia-cache-plots-v1
           cache-compiled: true  # コンパイル済みファイルもキャッシュ
-      
+
       # Documenter.jlのインストール
-      - name: Install dependencies
+      - name: Install Julia dependencies
         run: |
-          julia -e '
+          julia --project=docs -e '
             using Pkg
-            Pkg.activate("docs")
             Pkg.instantiate()
           '
       
