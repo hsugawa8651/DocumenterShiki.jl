@@ -139,7 +139,8 @@ pre code {
     background: transparent !important;
 }
 
-html.theme--dark pre code {
+html.theme--dark pre code,
+html.theme--documenter-dark pre code {
     color: #c9d1d9 !important;
 }
 
@@ -212,13 +213,15 @@ html.theme--dark pre code {
 }
 
 /* Documenterテーマとの統合 */
-html.theme--dark .shiki-loading {
+html.theme--dark .shiki-loading,
+html.theme--documenter-dark .shiki-loading {
     background: #0d1117;
     border-color: #30363d;
     color: #c9d1d9;
 }
 
-html.theme--dark .shiki {
+html.theme--dark .shiki,
+html.theme--documenter-dark .shiki {
     border-color: #30363d;
 }
 
@@ -234,7 +237,19 @@ html.theme--dark .shiki span[style*="color:#586069"],
 html.theme--dark .shiki span[style*="color:#6a737d"],
 html.theme--dark .shiki span[style*="color:#6A737D"],
 html.theme--dark .shiki span[style*="color:#959da5"],
-html.theme--dark .shiki span[style*="color:#d1d5da"] {
+html.theme--dark .shiki span[style*="color:#d1d5da"],
+html.theme--documenter-dark .shiki span[style*="color:#24292e"],
+html.theme--documenter-dark .shiki span[style*="color:#24292E"],
+html.theme--documenter-dark .shiki span[style*="color:#000000"],
+html.theme--documenter-dark .shiki span[style*="color:#000"],
+html.theme--documenter-dark .shiki span[style*="color:black"],
+html.theme--documenter-dark .shiki span[style*="color:rgb(36, 41, 46)"],
+html.theme--documenter-dark .shiki span[style*="color:rgb(0, 0, 0)"],
+html.theme--documenter-dark .shiki span[style*="color:#586069"],
+html.theme--documenter-dark .shiki span[style*="color:#6a737d"],
+html.theme--documenter-dark .shiki span[style*="color:#6A737D"],
+html.theme--documenter-dark .shiki span[style*="color:#959da5"],
+html.theme--documenter-dark .shiki span[style*="color:#d1d5da"] {
     color: #c9d1d9 !important;
 }
 
@@ -243,17 +258,24 @@ html.theme--dark .shiki span[style*="color:#6A737D"],
 html.theme--dark .shiki span[style*="color:#6a737d"],
 html.theme--dark .shiki span[style*="color:#7C7C82"],
 html.theme--dark .shiki span[style*="color:#8E908C"],
-html.theme--dark .shiki span[style*="color:#969896"] {
+html.theme--dark .shiki span[style*="color:#969896"],
+html.theme--documenter-dark .shiki span[style*="color:#6A737D"],
+html.theme--documenter-dark .shiki span[style*="color:#6a737d"],
+html.theme--documenter-dark .shiki span[style*="color:#7C7C82"],
+html.theme--documenter-dark .shiki span[style*="color:#8E908C"],
+html.theme--documenter-dark .shiki span[style*="color:#969896"] {
     color: #b8c4ce !important;  /* さらに明るいグレー */
 }
 
 /* スタイル属性のないspan要素（デフォルト色）も明るくする */
-html.theme--dark .shiki span:not([style]) {
+html.theme--dark .shiki span:not([style]),
+html.theme--documenter-dark .shiki span:not([style]) {
     color: #c9d1d9 !important;
 }
 
 /* ダークテーマ全体を明るくする - デフォルトで白色に */
-html.theme--dark .shiki span {
+html.theme--dark .shiki span,
+html.theme--documenter-dark .shiki span {
     color: #ffffff !important;
 }
 
@@ -387,13 +409,15 @@ html.theme--light .shiki span[style*="color:#b392f0"] {
     background: rgba(255,255,255,1);
 }
 
-html.theme--dark .shiki .copy-button {
+html.theme--dark .shiki .copy-button ,
+html.theme--documenter-dark .shiki .copy-button {
     background: rgba(13,17,23,0.9);
     border-color: #30363d;
     color: #c9d1d9;
 }
 
-html.theme--dark .shiki .copy-button:hover {
+html.theme--dark .shiki .copy-button:hover ,
+html.theme--documenter-dark .shiki .copy-button:hover {
     background: rgba(13,17,23,1);
 }
 
@@ -490,7 +514,8 @@ html.theme--light .shiki .highlight-level-4 span {
 /* ダークモードでのハイライト - 行全体の背景色変更 */
 html.theme--dark .shiki .highlighted,
 html.theme--dark .shiki .line.highlighted,
-html.theme--dark .shiki .highlight-level-1 {
+html.theme--dark .shiki .highlight-level-1 ,
+html.theme--documenter-dark .shiki .highlight-level-1 {
     /* レベル1: 黄色系 - 行全体に薄い背景色 */
     background-color: rgba(255, 234, 0, 0.1);
     display: inline-block;
@@ -500,7 +525,8 @@ html.theme--dark .shiki .highlight-level-1 {
 
 html.theme--dark .shiki .highlighted::before,
 html.theme--dark .shiki .line.highlighted::before,
-html.theme--dark .shiki .highlight-level-1::before {
+html.theme--dark .shiki .highlight-level-1::before ,
+html.theme--documenter-dark .shiki .highlight-level-1::before {
     content: '';
     position: absolute;
     left: -16px;
@@ -514,11 +540,13 @@ html.theme--dark .shiki .highlight-level-1::before {
 /* ハイライトされた行のテキストを白色に調整 */
 html.theme--dark .shiki .highlighted span,
 html.theme--dark .shiki .line.highlighted span,
-html.theme--dark .shiki .highlight-level-1 span {
+html.theme--dark .shiki .highlight-level-1 span ,
+html.theme--documenter-dark .shiki .highlight-level-1 span {
     filter: brightness(1.4) contrast(1.1);
 }
 
-html.theme--dark .shiki .highlight-level-2 {
+html.theme--dark .shiki .highlight-level-2 ,
+html.theme--documenter-dark .shiki .highlight-level-2 {
     /* レベル2: 赤系 - 行全体に薄い背景色 */
     background-color: rgba(255, 95, 109, 0.1);
     display: inline-block;
@@ -526,7 +554,8 @@ html.theme--dark .shiki .highlight-level-2 {
     position: relative;
 }
 
-html.theme--dark .shiki .highlight-level-2::before {
+html.theme--dark .shiki .highlight-level-2::before ,
+html.theme--documenter-dark .shiki .highlight-level-2::before {
     content: '';
     position: absolute;
     left: -16px;
@@ -537,11 +566,13 @@ html.theme--dark .shiki .highlight-level-2::before {
     z-index: -1;
 }
 
-html.theme--dark .shiki .highlight-level-2 span {
+html.theme--dark .shiki .highlight-level-2 span ,
+html.theme--documenter-dark .shiki .highlight-level-2 span {
     filter: brightness(1.3) contrast(1.1);
 }
 
-html.theme--dark .shiki .highlight-level-3 {
+html.theme--dark .shiki .highlight-level-3 ,
+html.theme--documenter-dark .shiki .highlight-level-3 {
     /* レベル3: 緑系 - 行全体に薄い背景色 */
     background-color: rgba(95, 255, 135, 0.1);
     display: inline-block;
@@ -549,7 +580,8 @@ html.theme--dark .shiki .highlight-level-3 {
     position: relative;
 }
 
-html.theme--dark .shiki .highlight-level-3::before {
+html.theme--dark .shiki .highlight-level-3::before ,
+html.theme--documenter-dark .shiki .highlight-level-3::before {
     content: '';
     position: absolute;
     left: -16px;
@@ -560,11 +592,13 @@ html.theme--dark .shiki .highlight-level-3::before {
     z-index: -1;
 }
 
-html.theme--dark .shiki .highlight-level-3 span {
+html.theme--dark .shiki .highlight-level-3 span ,
+html.theme--documenter-dark .shiki .highlight-level-3 span {
     filter: brightness(1.3) contrast(1.1);
 }
 
-html.theme--dark .shiki .highlight-level-4 {
+html.theme--dark .shiki .highlight-level-4 ,
+html.theme--documenter-dark .shiki .highlight-level-4 {
     /* レベル4: 青系 - 行全体に薄い背景色 */
     background-color: rgba(100, 181, 255, 0.1);
     display: inline-block;
@@ -572,7 +606,8 @@ html.theme--dark .shiki .highlight-level-4 {
     position: relative;
 }
 
-html.theme--dark .shiki .highlight-level-4::before {
+html.theme--dark .shiki .highlight-level-4::before ,
+html.theme--documenter-dark .shiki .highlight-level-4::before {
     content: '';
     position: absolute;
     left: -16px;
@@ -595,17 +630,20 @@ html.theme--dark .shiki span[style*="color:#4078f2"],
 html.theme--dark .shiki span[style*="color:#0000FF"],
 html.theme--dark .shiki span[style*="color:#0000ff"],
 html.theme--dark .shiki span[style*="color:#0080FF"],
-html.theme--dark .shiki span[style*="color:#0080ff"] {
+html.theme--dark .shiki span[style*="color:#0080ff"] ,
+html.theme--documenter-dark .shiki span[style*="color:#0080ff"] {
     color: #e6f0ff !important;
 }
 
 /* ダークテーマでレベル2（赤背景）のテキストを白にする */
-html.theme--dark .shiki .highlight-level-2 span {
+html.theme--dark .shiki .highlight-level-2 span ,
+html.theme--documenter-dark .shiki .highlight-level-2 span {
     color: #ffffff !important;
 }
 
 /* ダークテーマでレベル4（青背景）のテキストを白にする */
-html.theme--dark .shiki .highlight-level-4 span {
+html.theme--dark .shiki .highlight-level-4 span ,
+html.theme--documenter-dark .shiki .highlight-level-4 span {
     color: #ffffff !important;
 }
 
@@ -618,11 +656,13 @@ html.theme--dark .shiki .highlight-level-4 span {
     background-color: rgba(248, 81, 73, 0.15);
 }
 
-html.theme--dark .shiki .diff.add {
+html.theme--dark .shiki .diff.add ,
+html.theme--documenter-dark .shiki .diff.add {
     background-color: rgba(46, 160, 67, 0.2);
 }
 
-html.theme--dark .shiki .diff.remove {
+html.theme--dark .shiki .diff.remove ,
+html.theme--documenter-dark .shiki .diff.remove {
     background-color: rgba(248, 81, 73, 0.2);
 }
 
@@ -712,6 +752,7 @@ function generate_shiki_javascript(config)
 
         // 複数のダークテーマクラスをチェック
         const isDark = htmlElement.classList.contains('theme--dark') ||
+                      htmlElement.classList.contains('theme--documenter-dark') ||
                       htmlElement.classList.contains('documenter-dark') ||
                       htmlElement.getAttribute('data-theme') === 'dark' ||
                       htmlElement.getAttribute('data-theme') === 'documenter-dark';
