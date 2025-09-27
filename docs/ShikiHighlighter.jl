@@ -254,7 +254,7 @@ html.theme--dark .shiki span:not([style]) {
 
 /* ダークテーマ全体を明るくする */
 html.theme--dark .shiki span {
-    filter: brightness(1.6) contrast(1.1);
+    filter: brightness(1.2) contrast(1.05);
 }
 
 /* ライトテーマで薄いテキストを濃くする */
@@ -700,23 +700,17 @@ function generate_shiki_javascript(config)
     function getCurrentTheme() {
         // Documenterのテーマをチェック
         const htmlElement = document.documentElement;
-        
-        // data-theme-primaryがある場合はライトテーマ
-        const hasLightTheme = htmlElement.querySelector('link[data-theme-primary]') !== null;
-        // data-theme-primary-darkがある場合はダークテーマ  
-        const hasDarkTheme = htmlElement.querySelector('link[data-theme-primary-dark]') !== null;
-        
+
         // 明示的にダークテーマクラスがある場合
         const isDark = htmlElement.classList.contains('theme--dark');
-        
-        console.log(`🌓 Theme detection: hasLightTheme=\${hasLightTheme}, hasDarkTheme=\${hasDarkTheme}, isDark=\${isDark}`);
-        
-        // ライトテーマが選択されていて、ダークテーマクラスがない場合はライトテーマを使用
-        const useLight = hasLightTheme && !isDark;
-        const selectedTheme = useLight ? SHIKI_CONFIG.theme : SHIKI_CONFIG.darkTheme;
-        
-        console.log(`🎨 Using theme: \${selectedTheme} (useLight=\${useLight})`);
-        
+
+        console.log(`🌓 Theme detection: isDark=\${isDark}`);
+
+        // ダークテーマが選択されている場合はダークテーマを使用
+        const selectedTheme = isDark ? SHIKI_CONFIG.darkTheme : SHIKI_CONFIG.theme;
+
+        console.log(`🎨 Using theme: \${selectedTheme} (isDark=\${isDark})`);
+
         return selectedTheme;
     }
     
