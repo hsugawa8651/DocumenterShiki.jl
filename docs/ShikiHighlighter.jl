@@ -583,11 +583,20 @@ html.theme--dark .shiki .highlight-level-4::before {
     z-index: -1;
 }
 
-/* ダークテーマで無色の識別子（変数名など）を白にする */
+/* ダークテーマで暗い色の識別子を白または明るい色にする */
 html.theme--dark .shiki span[style*="color:#0184BC"],
+html.theme--dark .shiki span[style*="color:#0184bc"],
 html.theme--dark .shiki span[style*="color:#383A42"],
-html.theme--dark .shiki span[style*="color:#50A14F"] {
-    color: #ffffff !important;
+html.theme--dark .shiki span[style*="color:#383a42"],
+html.theme--dark .shiki span[style*="color:#50A14F"],
+html.theme--dark .shiki span[style*="color:#50a14f"],
+html.theme--dark .shiki span[style*="color:#4078F2"],
+html.theme--dark .shiki span[style*="color:#4078f2"],
+html.theme--dark .shiki span[style*="color:#0000FF"],
+html.theme--dark .shiki span[style*="color:#0000ff"],
+html.theme--dark .shiki span[style*="color:#0080FF"],
+html.theme--dark .shiki span[style*="color:#0080ff"] {
+    color: #e6f0ff !important;
 }
 
 /* ダークテーマでレベル2（赤背景）のテキストを白にする */
