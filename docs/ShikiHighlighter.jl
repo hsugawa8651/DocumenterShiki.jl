@@ -225,7 +225,22 @@ html.theme--documenter-dark .shiki {
     border-color: #30363d;
 }
 
-/* Shikiのテーマが提供する色をそのまま使用 - 色の上書きを最小限にする */
+/* Shikiのテーマが提供する色をそのまま使用 - キーワードと数字はそのまま */
+/* 変数名（i, j等の通常の識別子）のみを上書き */
+
+/* ライトテーマ: 変数名を黒にする */
+html.theme--light .shiki span[style*="color:#383A42"],
+html.theme--light .shiki span[style*="color:#383a42"] {
+    color: #000000 !important;
+}
+
+/* ダークテーマ: 変数名を白にする */
+html.theme--dark .shiki span[style*="color:#383A42"],
+html.theme--dark .shiki span[style*="color:#383a42"],
+html.theme--documenter-dark .shiki span[style*="color:#383A42"],
+html.theme--documenter-dark .shiki span[style*="color:#383a42"] {
+    color: #ffffff !important;
+}
 
 /* ライトテーマで薄いテキストを濃くする */
 html.theme--light .shiki span[style*="color:#6F42C1"],
