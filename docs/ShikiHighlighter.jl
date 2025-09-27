@@ -279,6 +279,13 @@ html.theme--documenter-dark .shiki span {
     color: #ffffff !important;
 }
 
+/* ライトテーマでは元の色を使用 */
+html.theme--light .shiki span,
+html.theme--documenter-light .shiki span,
+html:not(.theme--dark):not(.theme--documenter-dark) .shiki span {
+    color: inherit !important;
+}
+
 /* ライトテーマで薄いテキストを濃くする */
 html.theme--light .shiki span[style*="color:#6F42C1"],
 html.theme--light .shiki span[style*="color:#6f42c1"] {
