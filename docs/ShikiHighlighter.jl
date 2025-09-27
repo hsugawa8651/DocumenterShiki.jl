@@ -710,10 +710,13 @@ function generate_shiki_javascript(config)
         // Documenterのテーマをチェック
         const htmlElement = document.documentElement;
 
-        // 明示的にダークテーマクラスがある場合
-        const isDark = htmlElement.classList.contains('theme--dark');
+        // 複数のダークテーマクラスをチェック
+        const isDark = htmlElement.classList.contains('theme--dark') ||
+                      htmlElement.classList.contains('documenter-dark') ||
+                      htmlElement.getAttribute('data-theme') === 'dark' ||
+                      htmlElement.getAttribute('data-theme') === 'documenter-dark';
 
-        console.log(`🌓 Theme detection: isDark=\${isDark}`);
+        console.log(`🌓 Theme detection: isDark=\${isDark}, classes=\${htmlElement.className}`);
 
         // ダークテーマが選択されている場合はダークテーマを使用
         const selectedTheme = isDark ? SHIKI_CONFIG.darkTheme : SHIKI_CONFIG.theme;
