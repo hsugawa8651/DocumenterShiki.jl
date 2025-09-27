@@ -252,9 +252,9 @@ html.theme--dark .shiki span:not([style]) {
     color: #c9d1d9 !important;
 }
 
-/* ダークテーマ全体を明るくする */
+/* ダークテーマ全体を明るくする - デフォルトで白色に */
 html.theme--dark .shiki span {
-    filter: brightness(1.2) contrast(1.05);
+    color: #ffffff !important;
 }
 
 /* ライトテーマで薄いテキストを濃くする */
