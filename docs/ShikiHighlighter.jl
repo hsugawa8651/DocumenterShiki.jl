@@ -415,15 +415,7 @@ html.theme--documenter-dark .shiki .copy-button:hover {
     position: relative;
 }
 
-/* ライトテーマでレベル2（赤背景）のテキストを白にする */
-html.theme--light .shiki .highlight-level-2 span {
-    color: #ffffff !important;
-}
-
-/* ライトテーマでレベル4（青背景）のテキストを白にする */
-html.theme--light .shiki .highlight-level-4 span {
-    color: #ffffff !important;
-}
+/* ハイライト行でも通常の文字色ルールを適用 */
 
 .shiki .highlight-level-2::before {
     content: '';
@@ -500,13 +492,7 @@ html.theme--documenter-dark .shiki .highlight-level-1::before {
     z-index: -1;
 }
 
-/* ハイライトされた行のテキストを白色に調整 */
-html.theme--dark .shiki .highlighted span,
-html.theme--dark .shiki .line.highlighted span,
-html.theme--dark .shiki .highlight-level-1 span ,
-html.theme--documenter-dark .shiki .highlight-level-1 span {
-    filter: brightness(1.4) contrast(1.1);
-}
+/* ハイライト行でも通常の色ルールを使用（フィルタなし） */
 
 html.theme--dark .shiki .highlight-level-2 ,
 html.theme--documenter-dark .shiki .highlight-level-2 {
@@ -529,10 +515,6 @@ html.theme--documenter-dark .shiki .highlight-level-2::before {
     z-index: -1;
 }
 
-html.theme--dark .shiki .highlight-level-2 span ,
-html.theme--documenter-dark .shiki .highlight-level-2 span {
-    filter: brightness(1.3) contrast(1.1);
-}
 
 html.theme--dark .shiki .highlight-level-3 ,
 html.theme--documenter-dark .shiki .highlight-level-3 {
@@ -555,10 +537,6 @@ html.theme--documenter-dark .shiki .highlight-level-3::before {
     z-index: -1;
 }
 
-html.theme--dark .shiki .highlight-level-3 span ,
-html.theme--documenter-dark .shiki .highlight-level-3 span {
-    filter: brightness(1.3) contrast(1.1);
-}
 
 html.theme--dark .shiki .highlight-level-4 ,
 html.theme--documenter-dark .shiki .highlight-level-4 {
@@ -581,18 +559,6 @@ html.theme--documenter-dark .shiki .highlight-level-4::before {
     z-index: -1;
 }
 
-
-/* ダークテーマでレベル2（赤背景）のテキストを白にする */
-html.theme--dark .shiki .highlight-level-2 span ,
-html.theme--documenter-dark .shiki .highlight-level-2 span {
-    color: #ffffff !important;
-}
-
-/* ダークテーマでレベル4（青背景）のテキストを白にする */
-html.theme--dark .shiki .highlight-level-4 span ,
-html.theme--documenter-dark .shiki .highlight-level-4 span {
-    color: #ffffff !important;
-}
 
 /* 差分表示のスタイル（オプション） */
 .shiki .diff.add {
