@@ -225,66 +225,7 @@ html.theme--documenter-dark .shiki {
     border-color: #30363d;
 }
 
-/* ダークテーマで暗いテキストを修正 */
-html.theme--dark .shiki span[style*="color:#24292e"],
-html.theme--dark .shiki span[style*="color:#24292E"],
-html.theme--dark .shiki span[style*="color:#000000"],
-html.theme--dark .shiki span[style*="color:#000"],
-html.theme--dark .shiki span[style*="color:black"],
-html.theme--dark .shiki span[style*="color:rgb(36, 41, 46)"],
-html.theme--dark .shiki span[style*="color:rgb(0, 0, 0)"],
-html.theme--dark .shiki span[style*="color:#586069"],
-html.theme--dark .shiki span[style*="color:#6a737d"],
-html.theme--dark .shiki span[style*="color:#6A737D"],
-html.theme--dark .shiki span[style*="color:#959da5"],
-html.theme--dark .shiki span[style*="color:#d1d5da"],
-html.theme--documenter-dark .shiki span[style*="color:#24292e"],
-html.theme--documenter-dark .shiki span[style*="color:#24292E"],
-html.theme--documenter-dark .shiki span[style*="color:#000000"],
-html.theme--documenter-dark .shiki span[style*="color:#000"],
-html.theme--documenter-dark .shiki span[style*="color:black"],
-html.theme--documenter-dark .shiki span[style*="color:rgb(36, 41, 46)"],
-html.theme--documenter-dark .shiki span[style*="color:rgb(0, 0, 0)"],
-html.theme--documenter-dark .shiki span[style*="color:#586069"],
-html.theme--documenter-dark .shiki span[style*="color:#6a737d"],
-html.theme--documenter-dark .shiki span[style*="color:#6A737D"],
-html.theme--documenter-dark .shiki span[style*="color:#959da5"],
-html.theme--documenter-dark .shiki span[style*="color:#d1d5da"] {
-    color: #c9d1d9 !important;
-}
-
-/* コメントを明るくする */
-html.theme--dark .shiki span[style*="color:#6A737D"],
-html.theme--dark .shiki span[style*="color:#6a737d"],
-html.theme--dark .shiki span[style*="color:#7C7C82"],
-html.theme--dark .shiki span[style*="color:#8E908C"],
-html.theme--dark .shiki span[style*="color:#969896"],
-html.theme--documenter-dark .shiki span[style*="color:#6A737D"],
-html.theme--documenter-dark .shiki span[style*="color:#6a737d"],
-html.theme--documenter-dark .shiki span[style*="color:#7C7C82"],
-html.theme--documenter-dark .shiki span[style*="color:#8E908C"],
-html.theme--documenter-dark .shiki span[style*="color:#969896"] {
-    color: #b8c4ce !important;  /* さらに明るいグレー */
-}
-
-/* スタイル属性のないspan要素（デフォルト色）も明るくする */
-html.theme--dark .shiki span:not([style]),
-html.theme--documenter-dark .shiki span:not([style]) {
-    color: #c9d1d9 !important;
-}
-
-/* ダークテーマ全体を明るくする - デフォルトで白色に */
-html.theme--dark .shiki span,
-html.theme--documenter-dark .shiki span {
-    color: #ffffff !important;
-}
-
-/* ライトテーマでは元の色を使用 */
-html.theme--light .shiki span,
-html.theme--documenter-light .shiki span,
-html:not(.theme--dark):not(.theme--documenter-dark) .shiki span {
-    color: inherit !important;
-}
+/* Shikiのテーマが提供する色をそのまま使用 - 色の上書きを最小限にする */
 
 /* ライトテーマで薄いテキストを濃くする */
 html.theme--light .shiki span[style*="color:#6F42C1"],
@@ -625,22 +566,6 @@ html.theme--documenter-dark .shiki .highlight-level-4::before {
     z-index: -1;
 }
 
-/* ダークテーマで暗い色の識別子を白または明るい色にする */
-html.theme--dark .shiki span[style*="color:#0184BC"],
-html.theme--dark .shiki span[style*="color:#0184bc"],
-html.theme--dark .shiki span[style*="color:#383A42"],
-html.theme--dark .shiki span[style*="color:#383a42"],
-html.theme--dark .shiki span[style*="color:#50A14F"],
-html.theme--dark .shiki span[style*="color:#50a14f"],
-html.theme--dark .shiki span[style*="color:#4078F2"],
-html.theme--dark .shiki span[style*="color:#4078f2"],
-html.theme--dark .shiki span[style*="color:#0000FF"],
-html.theme--dark .shiki span[style*="color:#0000ff"],
-html.theme--dark .shiki span[style*="color:#0080FF"],
-html.theme--dark .shiki span[style*="color:#0080ff"] ,
-html.theme--documenter-dark .shiki span[style*="color:#0080ff"] {
-    color: #e6f0ff !important;
-}
 
 /* ダークテーマでレベル2（赤背景）のテキストを白にする */
 html.theme--dark .shiki .highlight-level-2 span ,
