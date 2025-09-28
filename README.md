@@ -1,10 +1,10 @@
 # DocumenterShiki.jl
 
 [![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://hsugawa8651.github.io/DocumenterShiki.jl/)
-![Shiki](https://img.shields.io/badge/powered%20by-Shiki-10b981)
-![Documenter.jl](https://img.shields.io/badge/built%20with-Documenter.jl-9558b2)
+[![Shiki](https://img.shields.io/badge/powered%20by-Shiki-10b981)](https://shiki.style/)
+[![Documenter.jl](https://img.shields.io/badge/built%20with-Documenter.jl-9558b2)](https://documenter.juliadocs.org/)
 
-Modern syntax highlighting for Documenter.jl using [Shiki](https://shiki.style/).
+Modern syntax highlighting for [Documenter.jl](https://documenter.juliadocs.org/) using [Shiki](https://shiki.style/).
 
 ## Overview
 
